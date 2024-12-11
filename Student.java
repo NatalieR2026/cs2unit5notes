@@ -7,8 +7,8 @@ Object-Oriented Classes are like BLUEPRINTS
         // 1. INSTANCE VARIABLES (attributes/data/fields)
         // think of what this object "needs to know"
         // must be PRIVATE ("encapsulation")
-        private String fName; // "a Student has a name"
-        private String lName;
+        private String firstName; // "a Student has a name"
+        private String lastName;
         private int gradYear; 
         private String email;
     
@@ -17,21 +17,29 @@ Object-Oriented Classes are like BLUEPRINTS
         // DEFAULT constructor (user did not provide data
         // Job: initialize instance variables to default values
         public Student() {
-            fName = "First";
-            lName = "Last";
+            firstName = "First";
+            lastName = "Last";
             gradYear = 2037;
-            email = fName + "." + lName + gradYear + "@gbwl.org"
+            email = firstName + "." + lastName + gradYear + "@gbwl.org";
         }
 
         // Constructor with PARAMETERS (user provided key data)
         // Job: initialize instance variables to PROVIDED values
-        public Student(String initFName, String initLName, int initGradYear) {
-            fName = initFName;
-            lName = initLName;
+        // ORDER OF PARAMETERS IS IMPORTANT! (the data types)
+        // "initFirstName", etc. are like PLACEHOLDERS for real values
+        public Student(String initFirstName, String initLastName, int initGradYear) {
+            firstName = initFirstName;
+            lastName = initLastName;
             gradYear = initGradYear;
-            email = fName + "." + lName + gradYear + "@gbwl.org"
+            email = firstName + "." + lastName + gradYear + "@gbwl.org";
         }
 
         // 3. METHODS (behaviors associated w/ the object type)
+
+        // toString method provides a "String Representation"
+        // of an object instance with all its data
+        public String toString() {
+            return ("Student [" + firstName + ", " + lastName + ", " + gradYear + ", " + email + "]");
+        }
 
 }
