@@ -23,6 +23,7 @@ Object-Oriented Classes are like BLUEPRINTS
             email = firstName + "." + lastName + gradYear + "@gbwl.org";
         }
 
+
         // Constructor with PARAMETERS (user provided key data)
         // Job: initialize instance variables to PROVIDED values
         // ORDER OF PARAMETERS IS IMPORTANT! (the data types)
@@ -41,5 +42,21 @@ Object-Oriented Classes are like BLUEPRINTS
         public String toString() {
             return ("Student [" + firstName + ", " + lastName + ", " + gradYear + ", " + email + "]");
         }
+
+        // ACCESSOR METHODS ("Getters") return copies of the private data
+        // write one for each of your instance variables!
+        public String getFirstName() {
+            return firstName;
+        }
+        public String getLastName() {
+            return lastName;
+        }
+        public int getGradYear() {
+            return gradYear;
+        }
+        public String getEmail() {
+            return email;
+        }
+
 
 }

@@ -19,11 +19,13 @@ public class Main {
       System.out.println(kinder); // will print the LOCATION of the object
       // unless our class has a toString method defined
 
-      // Construct two more Student objects and print them out
-      Student senior = new Student("Alex", "Greenholtz", 2025);
-      System.out.println(senior);
-      Student sophomore = new Student("Kyanni", "Gonzalez", 2027);
-      System.out.println(sophomore);
+      // Test ACCESSOR/GETTER methods
+      // methods that RETURN output need to be handled
+      // 1. eitherr by storing the output in a variable
+      String juniorEmail = junior.getEmail();
+      System.out.println(juniorEmail);
+      // 2. or by using the method call directly
+      System.out.println(kinder.getEmail());
 
    }
 }
