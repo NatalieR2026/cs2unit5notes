@@ -37,9 +37,16 @@ public class Main {
       System.out.println(kinder);
       // note that didn't need to setGradYear because the DEFAULT CONSTRUCTOR gave an appropriate value for this already (we chose 2037 as the default)
       
-      
       // Use the Object class' equals() method
+      // Checks the values of each instance variable
+      // junior is the CALLING OBJECT, kinder...
       boolean isEqual = junior.equals(kinder);
+
+      // CALL our custom behavior methods
+      // Example: no output, no input
+      junior.complain();
+      // Example: no output, needs input
+      junior.doHomework(8);
 
    }
 }
