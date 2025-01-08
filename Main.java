@@ -1,7 +1,8 @@
 public class Main {
 
-   // This iis the "TESTER CLASS" with a main method
-
+   // This is the "TESTER CLASS" with a main method
+   // main method is STATIC because a class ("program") should only have the entry point
+   // reminder: the MAIN METHOD is what executes when the RUN button is pressed
    public static void main(String []args) {
       System.out.println("Constructing Student Objects...");
 
@@ -55,9 +56,12 @@ public class Main {
       test.getEmail();
       test.setGradYear(2026);
       test.doHomework(10);
-      
 
+      // Demonstrate use of STATIC methods (one copy for a class)
+      Student.printObjectCount();
 
+      Student middleSchoolerr = new Student();
+      Student.printObjectCount();
 
    }
 }

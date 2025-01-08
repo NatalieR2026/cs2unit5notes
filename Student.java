@@ -11,9 +11,17 @@ Object-Oriented Classes are like BLUEPRINTS
         private String lastName;
         private int gradYear; 
         private String email;
-    
+        // STATIC variables for data that should only have ONE COPY for an entire CLASS
+        private static int currentYear = 2025;
+        private static String schoolName = "BWL";
+        private static int studentCount = 0; // COUNTER
+        // static does NOT mean unchanging/constant here
+        // instead, the keyword FINAL would be used
+
         // 2. CONSTRUCTORS (manuals for setting up an object)
         
+
+
         // DEFAULT constructor (user did not provide data
         // Job: initialize instance variables to default values
         public Student() {
@@ -21,6 +29,8 @@ Object-Oriented Classes are like BLUEPRINTS
             lastName = "Last";
             gradYear = 2037;
             email = firstName + "." + lastName + gradYear + "@gbwl.org";
+            // increment the studenet object counter static variable
+            studentCount++;
         }
 
 
@@ -33,6 +43,7 @@ Object-Oriented Classes are like BLUEPRINTS
             lastName = initLastName;
             gradYear = initGradYear;
             email = firstName + "." + lastName + gradYear + "@gbwl.org";
+            studentCount++;
         }
 
         // 3. METHODS (behaviors associated w/ the object type)
@@ -74,6 +85,7 @@ Object-Oriented Classes are like BLUEPRINTS
             email = newEmail;
         }
 
+
         // OTHER METHODS (behaviors/actions associated with the object)
 
         // Example: VOID method, no parameters
@@ -90,8 +102,11 @@ Object-Oriented Classes are like BLUEPRINTS
             System.out.println("Done with homework!");
         }
 
-
-
-
+        // Example: interact with a static variable
+        // METHODS can also be STATIC - meaning that the behavior/action
+        // is associated with
+        public static void printObjectCount() {
+            System.out.println(studentCount);
+        }
 
 }
