@@ -23,26 +23,29 @@ Object-Oriented Classes are like BLUEPRINTS
 
 
         // DEFAULT constructor (user did not provide data
+        // "no-argument" constructor
         // Job: initialize instance variables to default values
         public Student() {
-            firstName = "First";
-            lastName = "Last";
-            gradYear = 2037;
-            email = firstName + "." + lastName + gradYear + "@gbwl.org";
+            this.firstName = "First";
+            this.lastName = "Last";
+            this.gradYear = 2037;
+            this.email = firstName + "." + lastName + gradYear + "@gbwl.org";
+
             // increment the studenet object counter static variable
+            // do not use this.studentCount because it is data belonging to the CLASS, not an object instance
             studentCount++;
         }
-
 
         // Constructor with PARAMETERS (user provided key data)
         // Job: initialize instance variables to PROVIDED values
         // ORDER OF PARAMETERS IS IMPORTANT! (the data types)
         // "initFirstName", etc. are like PLACEHOLDERS for real values
-        public Student(String initFirstName, String initLastName, int initGradYear) {
-            firstName = initFirstName;
-            lastName = initLastName;
-            gradYear = initGradYear;
-            email = firstName + "." + lastName + gradYear + "@gbwl.org";
+        public Student(String firstName, String lastName, int gradYear) {
+            // THIS keyword indicates CURRENT CALLING OBJECT
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gradYear = gradYear;
+            this.email = firstName + "." + lastName + gradYear + "@gbwl.org";
             studentCount++;
         }
 
