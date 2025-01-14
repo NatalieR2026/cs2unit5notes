@@ -93,7 +93,7 @@ Object-Oriented Classes are like BLUEPRINTS
 
         // Example: VOID method, no parameters
         public void complain() {
-            // Method BODY is the step(s) for thiis process
+            // Method BODY is the step(s) for this process
             System.out.println("I am too tired");
         }
         // Example: VOID method, needs a parameter
